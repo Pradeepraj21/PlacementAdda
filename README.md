@@ -14,15 +14,15 @@ A Placement Management System, which allows placement cell to add companies whic
 
 ## Technologies used in the project
 
-a. Node.js
-b. Express.js
-c. MongoDB
-d. RESTful API
-e. JavaScript
-f. Bootstrap
-g. HTML
-h. CSS
-i. Visual Studio Code
+1. Node.js
+2. Express.js
+3. MongoDB
+4. RESTful API
+5. JavaScript
+6. Bootstrap
+7. HTML
+8. CSS
+9. Visual Studio Code
 
 ## MODEL:
 
