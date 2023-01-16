@@ -3,13 +3,14 @@
 A Placement Management System, which allows placement cell to add companies which are hiring and allows students to apply to those companies. The Placement Cell can manage and view which students are not placed and which are placed already. Students can also view all Frequently Asked Questions during interview rounds and tests.Developed in Node.js, Express.js, MongoDB, RESTful API and HTML, CSS, Bootstrap and EJS (Template Engine).
 
 ![](website-images/website-HomePage.PNG)
-![](website-images/website-Gallery.PNG)
-![](website-images/website-Login.PNG)
-![](website-images/website-Parking.PNG)
-![](website-images/website-Complaints.PNG)
-![](website-images/website-Notice.PNG)
-![](website-images/website-Visitors.PNG)
-![](website-images/website-Employee.PNG)
+![](website-images/website-Aptitude.PNG)
+![](website-images/website-Companies.PNG)
+![](website-images/website-Company-profile.PNG)
+![](website-images/website-Job-Openings.PNG)
+![](website-images/website-Apply-Companies.PNG)
+![](website-images/website-AdminDashboard.PNG)
+![](website-images/website-Admin-Update-Companies.PNG)
+![](website-images/website-Admin-manage-Students.PNG)
 
 ## Technologies used in the project
 
