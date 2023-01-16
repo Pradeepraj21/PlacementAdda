@@ -1,0 +1,58 @@
+<!-- include admin header -->
+<%- include('include/_adminHeader')%>
+    <!-- include admin header -->
+
+    <!--Main Site-->
+
+    <!--UPDATE COMPANIES-->
+
+    <h2>Welcome, Placement Cell</h2>
+    <h5 class="table-title text-center"><b>Update Company Information</b></h5>
+    <div class="table-responsive">
+        <table class="table">
+            <thead class="thead" style="background-color: #3598fe">
+                <tr>
+                    <th scope="col">COMPANY NAME</th>
+                    <th scope="col">JOB ROLE</th>
+                    <th scope="col">SALARY</th>
+                    <th scope="col">LOCATION</th>
+                    <th scope="col">ACTION</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%for(var i=0; i < company.length; i++){%>
+                    <tr>
+                        <td scope="row" class="font-weight-bold">
+                            <%=company[i].companyName%>
+                        </td>
+                        <td>
+                            <%=company[i].role%>
+                        </td>
+                        <td>
+                            <%=company[i].salary%>
+                        </td>
+                        <td>
+                            <%=company[i].location%>
+                        </td>
+                        <td>
+                            <a href="edit-company?id=<%=company[i]._id%>"><button type="submit"
+                                    class="btn bg-success text-white">
+                                    <i class="fa fa-edit"></i> UPDATE
+                                </button></a>
+                        </td>
+                    </tr>
+                    <%}%>
+            </tbody>
+        </table>
+    </div>
+
+    <!--/UPDATE COMPANIES-->
+    <div class="line"></div>
+    </div>
+    </div>
+
+    <!--/Main Site-->
+
+    <!-- include admin footer -->
+    <%- include('include/_adminFooter')%>
+        <!-- include admin footer -->

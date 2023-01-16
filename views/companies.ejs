@@ -1,0 +1,127 @@
+<!-- include header -->
+<%- include('include/_header')%>
+  <!-- include header -->
+
+  <!-- Main Site -->
+  <div class="container-fluid placement-gallery">
+    <div id="current-job-openings">
+      <h2 class="text-center mb-5" style="color: #f26d21">
+        Current Job Openings
+      </h2>
+      <!-- <form action="/api/apply" method="POST"> -->
+      <div class="table-responsive">
+        <table class="table">
+          <thead class="thead" style="background-color: #3598fe">
+            <tr>
+              <th scope="col">COMPANY NAME</th>
+              <th scope="col">JOB ROLE</th>
+              <th scope="col">SALARY</th>
+              <th scope="col">LOCATION</th>
+              <th scope="col">DATE</th>
+              <th scope="col">ACTION</th>
+            </tr>
+          </thead>
+          <tbody>
+            <%for(var i=0; i < company.length; i++){%>
+              <tr>
+                <td scope="row" class="font-weight-bold">
+                  <%=company[i].companyName%>
+                </td>
+                <td>
+                  <%=company[i].role%>
+                </td>
+                <td>
+                  <%=company[i].salary%>
+                </td>
+                <td>
+                  <%=company[i].location%>
+                </td>
+                <td>
+                  <%=company[i].interviewDate%>
+                </td>
+                <td>
+                  <%if (req.student.isPlaced==="true" ) { %>
+                    <!-- <span class="badge badge-success">YOU ARE PLACED ALREADY</span> -->
+                    <input type="submit" class="btn bg-primary text-white" value="YOU'RE ALREADY PLACED" disabled />
+                    <% } else { %>
+                      <a href="/company-profile?sId=<%=req.student.id%>&id=<%=company[i]._id %>"><button type="submit"
+                          class="btn bg-primary text-white">
+                          <i class="fa fa-edit"></i> APPLY NOW
+                        </button></a>
+                      <%}%>
+                </td>
+              </tr>
+              <%}%>
+          </tbody>
+        </table>
+      </div>
+
+      <hr />
+    </div>
+  </div>
+
+  <!-- <div class="head-cards text-center">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="card text-white bg-info mb-3" style="max-width: 18rem">
+          <div class="card-header">
+            <h5 class="card-title">
+              <img src="img/alumni.png" /><b> ALUMNI</b>
+            </h5>
+          </div>
+          <div class="card-body">
+            <p class="card-title">
+              Interact with the alumni of the SIES College of Management
+              Studies (Feature Coming Soon)
+            </p>
+            <h4 class="card-text">
+              <a href="under_progress" style="color: floralwhite"><b>Know More >></b></a>
+            </h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="card text-white bg-success mb-3" style="max-width: 18rem">
+          <div class="card-header">
+            <h5 class="card-title">
+              <img src="img/job.jpg" /><b> COMPANY HIRING </b>
+            </h5>
+          </div>
+          <div class="card-body">
+            <p class="card-title">
+              View which companies are hiring right now and apply!
+            </p>
+            <h4 class="card-text">
+              <a href="#current-job-openings" style="color: floralwhite"><b>Know More >></b></a>
+            </h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="card text-white bg-dark mb-3" style="max-width: 18rem">
+          <div class="card-header">
+            <h5 class="card-title">
+              <img src="img/resume.png" /><b> UPLOAD RESUME </b>
+            </h5>
+          </div>
+          <div class="card-body">
+            <p class="card-title">
+              Your resume can be sent directly to the company you applied
+              for (Feature Coming Soon)
+            </p>
+            <h4 class="card-text">
+              <a href="under_progress" style="color: floralwhite"><b>Know More >></b></a>
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- /Main Site -->
+
+  <!-- include footer -->
+  <%- include('include/_footer')%>
+    <!-- include footer -->

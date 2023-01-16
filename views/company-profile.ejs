@@ -1,0 +1,81 @@
+<!-- include header -->
+<%- include('include/_header')%>
+  <!-- include header -->
+
+  <!-- Main Site -->
+
+  <!--COMPANY PROFILE-->
+
+  <div class="container-fluid placement-gallery">
+    <h2 class="text-center mb-5" style="color: #f26d21">
+      View Company Profile
+    </h2>
+    <hr />
+    <div class="container">
+      <form action="/api/apply/" id="apply-to-company" method="POST">
+        <input type="hidden" name="sId" value="<%= req.student._id %>">
+        <input type="hidden" name="id" value="<%= company._id %>">
+        <div class="row no-gutters">
+          <div class="col-md-3">
+            <div class="card border-primary text-center">
+              <h2 id="companyName">
+                <%=company.companyName%>
+              </h2>
+              <div class="card-body">
+                <input type="submit" class="btn btn-success" value="CONFIRM APPLICATION">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="bg-white p-2 px-3">
+              <div class="company-profile company">
+                <h5 id="companyDesc" class="company-profile company-desc text-justify">
+                  <%=company.companyDesc%>
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="company-profile company">
+          <table class="table mt-2">
+            <thead class="thead-light"></thead>
+            <tbody>
+              <tr>
+                <th scope="row">ROLE</th>
+                <td id="role">
+                  <%=company.role%>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">SALARY</th>
+                <td id="salary">
+                  <%=company.salary%>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">LOCATION</th>
+                <td id="location">
+                  <%=company.location%>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">DATE POSTED</th>
+                <td id="interviewDate">
+                  <%=company.interviewDate%>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!--/COMPANY PROFILE-->
+
+  <!-- /Main Site -->
+
+  <!-- include footer -->
+  <%- include('include/_footer')%>
+    <!-- include footer -->

@@ -1,0 +1,57 @@
+<!-- include admin header -->
+<%- include('include/_adminHeader')%>
+    <!-- include admin header -->
+
+    <!-- Main Site -->
+
+    <h2>Welcome, Placement Cell</h2>
+    <!--EDIT COMPANIES-->
+    <div class="registration-form m-0 p-0">
+        <h3 class="text-center">Update Company Information</h3>
+        <form method="POST" id="update-company">
+            <input type="hidden" name="id" value="<%= company._id %>">
+            <p><b>COMPANY NAME: </b></p>
+            <div class="form-group">
+                <input type="text" name="companyName" id="companyName" class="form-control item"
+                    value="<%=company.companyName%>" placeholder="Enter Company Name" tabindex="1" required>
+            </div>
+            <div class="form-group">
+                <p class="text-muted d-inline"><b>COMPANY DESCRIPTION: </b> &nbsp;&nbsp;</p>
+                <textarea name="companyDesc" id="companyDesc" class="md-textarea form-control"
+                    rows="3"><%=company.companyDesc%></textarea>
+            </div>
+            <div class="form-group">
+                <p class="text-muted d-inline"><b>JOB ROLE: </b> &nbsp;&nbsp;</p>
+                <input type="text" name="role" id="role" class="form-control item" value="<%=company.role%>"
+                    placeholder="Enter Job Role" required>
+            </div>
+            <div class="form-group">
+                <p class="text-muted d-inline"><b>SALARY: </b> &nbsp;&nbsp;</p><br>
+                <input type="text" name="salary" id="salary" class="form-control item" value="<%=company.salary%>"
+                    placeholder="Enter Salary in Lakhs Per Annum (LPA)">
+            </div>
+            <div class="form-group">
+                <p><b>JOB LOCATION: </b></p>
+                <input type="text" class="form-control item" name="location" id="location" value="<%=company.location%>"
+                    placeholder="Location">
+            </div>
+            <div class="form-group">
+                <p><b>DATE: </b></p>
+                <input type="date" class="form-control item" name="interviewDate" id="interviewDate"
+                    value="<%=company.interviewDate%>">
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-block create-account" value="Update Company" />
+            </div>
+        </form>
+    </div>
+    <!--/EDIT COMPANIES-->
+    <div class="line"></div>
+    </div>
+    </div>
+
+    <!-- /Main Site -->
+
+    <!-- include admin footer -->
+    <%- include('include/_adminFooter')%>
+        <!-- include admin footer -->

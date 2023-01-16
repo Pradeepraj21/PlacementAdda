@@ -1,0 +1,118 @@
+<!-- include header -->
+<%- include('include/_header')%>
+  <!-- include header -->
+
+  <!-- Main Site -->
+
+  <!-- REGISTRATION FORM-->
+
+  <section id="register-form">
+    <div class="container">
+      <div class="registration-form">
+        <h3 class="text-center">Register in Placement Adda</h3>
+        <form action="/api/student" method="POST">
+          <div class="form-icon">
+            <span><i class="fa-solid fa-user"></i></span>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control item" name="sId" id="sId"
+              placeholder="Student ID                                        Example: MCA21_010" required>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+              <div class="form-group">
+                <input type="text" name="firstName" id="firstName" class="form-control item" placeholder="First Name"
+                  tabindex="1" required>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6">
+              <div class="form-group">
+                <input type="text" name="lastName" id="lastName" class="form-control item" placeholder="Last Name"
+                  tabindex="2" required>
+              </div>
+            </div>
+          </div>
+          <div class="form-group text-center">
+            <p class="text-muted d-inline">Gender: &nbsp;&nbsp;</p>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="gender" id="gender" value="male" required>
+              <label class="form-check-label" for="inlineRadio1">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="gender" id="gender" value="female" required>
+              <label class="form-check-label" for="inlineRadio2">Female</label>
+            </div>
+          </div>
+          <div class="form-group text-center">
+            <p class="text-muted d-inline">Course: &nbsp;&nbsp;</p>
+            <select class="form-control-sm" name="course" id="course">
+              <option value="MCA" selected>MCA</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control item" name="email" id="email" placeholder="Email" required>
+          </div>
+          <div class="form-group">
+            <input type="number" class="form-control item" name="phone" id="phone" maxlength="10"
+              placeholder="Phone Number" required>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+              <div class="form-group">
+                <input type="password" name="password" id="password" class="form-control item" placeholder="Password"
+                  tabindex="5" required>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6">
+              <div class="form-group">
+                <input type="password" name="cpassword" id="cpassword" class="form-control item"
+                  placeholder="Confirm Password" tabindex="6" required>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+              <div class="form-group">
+                <input type="number" name="tenth" min="1" max="100" step="0.01" id="tenth" class="form-control item"
+                  placeholder="10th Board %" tabindex="1" required>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6">
+              <div class="form-group">
+                <input type="number" name="twelfth" min="1" max="100" step="0.01" id="twelfth" class="form-control item"
+                  placeholder="12th Board %" tabindex="2" required>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+              <div class="form-group">
+                <input type="number" name="graduation" min="1" max="100" step="0.01" id="graduation"
+                  class="form-control item" placeholder="Graduation %" tabindex="1" required>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6">
+              <div class="form-group">
+                <input type="number" name="postgraduation" min="1" max="100" step="0.01" id="postgraduation"
+                  class="form-control item" placeholder="Post-Graduation %" tabindex="2" required>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="submit" class="btn btn-block create-account" value="Register" />
+          </div>
+        </form>
+        <div class="below-register-form">
+          <a href="/login">Sign In</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- /REGISTRATION FORM-->
+
+  <!-- /Main Site -->
+
+  <!-- include footer -->
+  <%- include('include/_footer')%>
+    <!-- include footer -->

@@ -1,0 +1,36 @@
+<!-- include header -->
+<%- include('include/_header')%>
+  <!-- include header -->
+
+  <!-- Main Site -->
+
+  <section id="login-form">
+    <div class="container">
+      <div class="login-form">
+        <h3 class="text-center">Admin Login</h3>
+        <form action="/adminLogin" method="POST">
+          <div class="form-icon">
+            <span><i class="fa fa-sign-in"></i></span>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control item" name="email" id="email" placeholder="Email" required />
+          </div>
+          <div class="form-group">
+            <input type="password" name="password" id="password" class="form-control item" placeholder="Password"
+              tabindex="5" required />
+          </div>
+          <div class="form-group">
+            <input class="btn btn-block create-account" type="submit" value="Login" />
+          </div>
+        </form>
+        <div class="below-register-form">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- /Main Site -->
+
+  <!-- include footer -->
+  <%- include('include/_footer')%>
+    <!-- include footer -->

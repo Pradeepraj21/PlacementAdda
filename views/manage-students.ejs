@@ -1,0 +1,72 @@
+<!-- include admin header -->
+<%- include('include/_adminHeader')%>
+    <!-- include admin header -->
+
+    <!-- Main Site -->
+
+    <!--MANAGE STUDENTS-->
+    <h2>Welcome, Placement Cell</h2>
+    <!-- <div class="container-fluid placement-gallery">-->
+    <h5 class="table-title text-center"><b>Manage Students</b></h5>
+    <div class="table-responsive">
+        <table class="table">
+            <thead class="thead" style="background-color: #3598fe">
+                <tr>
+                    <th scope="col">STUDENT ID</th>
+                    <th scope="col">FIRST NAME</th>
+                    <th scope="col">LAST NAME</th>
+                    <th scope="col">GENDER</th>
+                    <th scope="col">COURSE</th>
+                    <th scope="col">EMAIL</th>
+                    <th scope="col">ACTION</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%for(var i=0; i < student.length; i++){%>
+                    <tr>
+                        <td class="font-weight-bold">
+                            <%=student[i].sId%>
+                        </td>
+                        <td scope="row">
+                            <%=student[i].firstName%>
+                        </td>
+                        <td scope="row">
+                            <%=student[i].lastName%>
+                        </td>
+                        <td scope="row">
+                            <%=student[i].gender%>
+                        </td>
+                        <td>
+                            <%=student[i].course%>
+                        </td>
+                        <td>
+                            <%=student[i].email%>
+                        </td>
+                        <td>
+                            <%if (student[i].isPlaced==="true" ) { %>
+                                <span class="badge badge-success">STUDENT PLACED</span>
+                                <% } else { %>
+                                    <a class="placed-student" data-id="<%=student[i]._id%>"><button type="submit"
+                                            class="btn bg-secondary text-white"> PLACED
+                                        </button></a>
+
+                                    <a class="revoke-student" data-id="<%=student[i]._id%>"><button type="submit"
+                                            class="btn bg-danger text-white">
+                                            REVOKE </button></a>
+                                    <%}%>
+                        </td>
+                    </tr>
+                    <%}%>
+            </tbody>
+        </table>
+    </div>
+
+    <!--/MANAGE STUDENTS-->
+    <div class="line"></div>
+    </div>
+    </div>
+    <!-- /Main Site -->
+
+    <!-- include admin footer -->
+    <%- include('include/_adminFooter')%>
+        <!-- include admin footer -->

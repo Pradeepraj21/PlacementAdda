@@ -1,0 +1,359 @@
+<!-- include header -->
+<%- include('include/_header')%>
+    <!-- include header -->
+
+    <!-- Main Site -->
+
+    <body>
+        <br />
+        <br />
+        <br />
+        <div class="row row-offcanvas row-offcanvas-left">
+            <div class="col-lg-10 col-md-9 col-sm-9 col-xs-12  ht">
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-12 col-xs-12 sidebar-offcanvas pa-box-shadow" id="sidebar">
+                        <div class="panel panel-info padda-left-panel ">
+                            <div class="panel-body">
+                                <div class="list-group padda-left-sidebar">
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <h4>Programming</h4>
+                                    <a class="list-group-item" hreflang="en">Linked List </a>
+                                    <a class="list-group-item" hreflang="en">Trees </a>
+                                    <a class="list-group-item" hreflang="en">Graphs </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.col-xs-6.col-lg-4-->
+                    <div class="col-lg-10 col-md-9 col-sm-12 col-xs-12 pa-box-shadow">
+                        <div class="panel panel-info pa-panel-info">
+                            <div class="panel-heading pa-panel-heading">
+                                <h4>Arrays</h4>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 question-box">
+                                    <div class="row question">
+                                        <div class="col-xs-12 col-sm-12">
+                                            <!-- /Example 1 -->
+                                            <dl>
+                                                <dt>
+                                                    1</dt>
+                                                <dd>
+                                                    <p>Largest Element in Array </p>
+                                                </dd>
+                                            </dl>
+
+                                        </div>
+                                    </div>
+
+
+
+                                    <a class=" btn-pri" data-toggle="collapse" href="#multiCollapseExample1"
+                                        aria-expanded="false">Answer </a>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                                <div class="card card-body">
+                                                    <pre>
+    #include <bits/stdc++.h>
+using namespace std;
+class Solution
+{
+public:
+    int largest(vector<int> &arr, int n)
+    {
+        int res = arr[0];
+    for (int i = 1; i < n; i++)
+        res = max(res, arr[i]);
+    return res;
+    }
+};
+int main()
+{
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        int n;
+        cin >> n;
+        vector<int>arr(n);
+        for (int i = 0; i < n; i++)
+        {
+            cin >> arr[i];
+        }
+        Solution ob;
+        cout << ob.largest(arr, n) << "\n";
+    }
+    return 0;
+}
+
+  </pre>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /Example 2 -->
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 question-box">
+                                            <div class="row question">
+                                                <div class="col-xs-12 col-sm-12">
+                                                    <dl>
+                                                        <dt>
+                                                            2</dt>
+                                                        <dd>
+                                                            <p>Rotate Array </p>
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                            <a class=" btn-pri" data-toggle="collapse" href="#multiCollapseExample2"
+                                                aria-expanded="false">Answer </a>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="collapse multi-collapse" id="multiCollapseExample2">
+                                                        <div class="card card-body">
+                                                            <pre>
+  #include <iostream>
+using namespace std;
+
+int main() {
+
+int t, n, d;
+cin >> t;
+for (int i = 0; i < t; i++)
+{
+    cin >> n >> d;
+    int arr[n];
+    for (int j = n - d; j < n; j++ )
+        cin >> arr[j];
+    for (int j = 0; j < n - d; j++ )
+        cin >> arr[j];
+    for (int j = 0; j < n; j++ )
+        cout << arr[j] << " ";
+    cout << endl;
+}
+return 0;
+}
+</pre>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /Example 3 -->
+                                            <div class="row">
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 question-box">
+                                                    <div class="row question">
+                                                        <div class="col-xs-12 col-sm-12">
+                                                            <dl>
+                                                                <dt>
+                                                                    3</dt>
+                                                                <dd>
+                                                                    <p>Maximum in Struct Array </p>
+                                                                </dd>
+                                                            </dl>
+
+                                                        </div>
+                                                    </div><a class=" btn-pri" data-toggle="collapse"
+                                                        href="#multiCollapseExample3" aria-expanded="false">Answer </a>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="collapse multi-collapse"
+                                                                id="multiCollapseExample3">
+                                                                <div class="card card-body">
+                                                                    <pre>
+// { Driver Code Starts
+#include <bits/stdc++.h>
+using namespace std;
+
+struct Height {
+  int feet;
+  int inches;
+};
+
+int findMax(Height arr[], int n);
+
+// driver program
+int main()
+{
+  int t;
+  cin>>t;
+  while(t--)
+  {
+      int n, tmp1, tmp2;
+      cin>>n;
+      Height arr[n];
+      for(int i=0; i<n; i++)
+      {
+          cin>>tmp1>>tmp2;
+          arr[i].feet = tmp1;
+          arr[i].inches = tmp2;
+      }
+      int res = findMax(arr, n);
+      cout<<res<<endl;
+  }
+  return 0;
+}// } Driver Code Ends
+
+
+/*
+Structure of the element of the array is as
+struct Height {
+  int feet;
+  int inches;
+};
+*/
+// function must return the maximum Height
+// return the height in inches
+int findMax(Height arr[], int n)
+{
+    int max= ((arr[0].feet)*12) + (arr[0].inches);
+    for(int i=0; i<=n-1; i++){
+        int height = ((arr[i].feet)*12) + (arr[i].inches);
+        if(max<height){
+            max=height;
+        }
+    }
+    return max;
+}
+</pre>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /Example 4 -->
+                                                    <div class="row">
+                                                        <div
+                                                            class="col-lg-12 col-md-12 col-sm-12 col-xs-12 question-box">
+                                                            <div class="row question">
+                                                                <div class="col-xs-12 col-sm-12">
+                                                                    <dl>
+                                                                        <dt>
+                                                                            4</dt>
+                                                                        <dd>
+                                                                            <p>Find unique element </p>
+                                                                        </dd>
+                                                                    </dl>
+
+                                                                </div>
+                                                            </div><a class=" btn-pri" data-toggle="collapse"
+                                                                href="#multiCollapseExample4"
+                                                                aria-expanded="false">Answer </a>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <div class="collapse multi-collapse"
+                                                                        id="multiCollapseExample4">
+                                                                        <div class="card card-body">
+                                                                            <pre>
+// { Driver Code Starts
+#include <bits/stdc++.h>
+using namespace std;
+// } Driver Code Ends
+class Solution{
+public:
+  int findUnique(int a[], int n) {
+ unordered_map<int,int> m;
+     for(int i=0;i<n;i++)
+     {
+         m[a[i]]++;
+     }
+     int ans=0;
+     for(auto it : m)
+     {
+         if(it.second%k!=0)
+         {
+             ans = it.first;
+         }
+     }
+     return ans;
+ }
+
+};
+
+// { Driver Code Starts.
+int main() {
+  int t;
+  cin >> t;
+  while (t--) {
+      int n, k;
+      cin >> n >> k;
+      int a[n], i;
+      for (i = 0; i < n; i++) {
+          cin >> a[i];
+      }
+      Solution obj;
+      cout << obj.findUnique(a, n, k) << endl;
+  }
+}  // } Driver Code Ends
+</div>
+</div>
+</div>
+</div>
+<!-- /Example 3 -->
+<div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 question-box">
+      <div class="row question">
+          <div class="col-xs-12 col-sm-12">
+              <dl>
+                  <dt>
+                      5</dt>
+                  <dd>
+                      <p>Maximum in Struct Array  </p>
+                    </dd>
+              </dl>
+
+          </div>
+      </div><a class=" btn-pri" data-toggle="collapse" href="#multiCollapseExample5"  aria-expanded="false" >Answer </a>
+<div class="row">
+<div class="col">
+<div class="collapse multi-collapse" id="multiCollapseExample5">
+<div class="card card-body">
+<pre>
+// { Driver Code Starts
+#include <bits/stdc++.h>
+using namespace std;
+
+// } Driver Code Ends
+class Solution
+{
+  public:
+      string MaxNumber(int a[], int n)
+      {
+         sort(a,a+n);
+         string ss="";
+         for(int i=n-1;i>=0;i--){
+             ss+=char(a[i]+'0');
+         }
+         return ss;
+      }
+};
+// { Driver Code Starts.
+int main() {
+  int t;
+  cin >> t;
+
+  while(t--){
+      int n;
+      cin >> n;
+
+      int a[n];
+      for(int i=0;i<n;i++)
+      cin>>a[i];
+
+      Solution ob;
+      cout << ob.MaxNumber(a, n) << endl;
+  }
+}
+// } Driver Code Ends
+</pre>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- /Main Site -->
+
+                                                            <!-- include footer -->
+                                                            <%- include('include/_footer')%>
+                                                                <!-- include footer -->
